@@ -4,9 +4,13 @@ var input = document.querySelector('input');
 
 var tasks = [];
 
+function removeTask(task) {
+  task.parentNode.removeChild(task);
+}
+
 function addTask(task) {
   var li = document.createElement('li');
-  li.innerHTML = '<input type="checkbox" name="done">' + '<span>'+task+'</span>' + "<img src='../assets/trash.png' alt='trash' />";
+  li.innerHTML = '<input type="checkbox" name="done">' + '<span>'+task+'</span>' + "<img src='../assets/trash.png' alt='trash' data-name='trash' />";
   tasksList.appendChild(li);
 }
 
@@ -20,9 +24,13 @@ form.addEventListener('submit', function(event){
 
 tasksList.addEventListener('change', function(event){
   var done = event.target;
-  console.log(done.nextSibling);
   done.nextSibling.classList.add('is-done');
 })
 
+tasksList.addEventListener('click', function(event){
+  event.target.dataset.name === 'trash' && (
+    event.target.parentNode.remove()
+  )
+})
 
 

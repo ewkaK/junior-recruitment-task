@@ -64,3 +64,9 @@ input[type="checkbox"]{
 img {
     float: right;
 }
+
+hr{
+    transform: rotate(90deg);
+    border: 0;
+    border-top: 3px double #f4ab85;
+}
