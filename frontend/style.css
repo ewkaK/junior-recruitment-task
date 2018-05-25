@@ -1,0 +1,66 @@
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    color: #2e3641;
+}
+
+.to-do{
+    border: 1px solid #ccc;
+}
+
+h1{
+    background: #2e3640;
+    color: #f9fafa;
+    margin: 0;
+    font-size: 1.5em;
+    padding: 0.5rem;
+
+}
+
+.is-done{
+    color: #9eb2c0;
+    text-decoration: line-through;
+}
+
+.is-done + img{
+    filter: brightness(300%);
+}
+
+button{
+    float: left;
+    border: 0;
+    background: none;
+    font-weight: 900 ;
+    padding: 0 0.4rem;
+    font-size: 1.7em;
+    color: #9eb2c0;
+
+}
+.clear{
+    clear: both;
+}
+
+
+
+li {
+    list-style: none;
+    padding: 0.4rem 1rem 0.4rem 0.4rem;
+    border-bottom: 1px solid #cccc;
+}
+
+
+input {
+    padding: 0.4rem;
+    border: none;
+    box-sizing: border-box;
+}
+
+input[type="checkbox"]{
+    border: 1px double red;
+    padding: 2px;
+    background: none;
+}
+
+img {
+    float: right;
+}
